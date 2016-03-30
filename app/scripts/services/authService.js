@@ -2,7 +2,7 @@ angular.module('AngularScaffold.Services').factory('AuthService', ['$http',
 	function($http){
 		$http.defaults.withCredentials = true;
 		var baseUrl = 'https://nelson-cardenas-backend.herokuapp.com/';
-		return {
+return {
 				Logout: function(){
 					return $http.get(baseUrl + "v1/logout");
 				},
