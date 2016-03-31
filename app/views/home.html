@@ -1,7 +1,7 @@
 <div ng-controller="HomeController">
     <h1 class = "tamano-titulo">{{titleObject.text}}</h1>
     <div class="row">
-        <input type="button" class="btn btn-warning" ng-click="getoffers()" value="Ver todas las Ofertas!" ng-show="isAdmin()">
+        <input type="button" class="btn btn-warning" ng-click="getOffers()" value="Ver todas las Ofertas!" ng-show="isAdmin()">
     </div>
     <br>
     <br>
@@ -21,7 +21,7 @@
         <label for="Salario">Salario: </label>
         <input type="text" name="Salario" ng-model="offer.salario">
         <br>
-        <input type="button" class="btn btn-primary" ng-click="postoffers()" value="Post to /offers!">
+        <input type="button" class="btn btn-primary" ng-click="postOffers()" value="Post to /offers!">
     </div>
     <div ng-show="isAdmin()">
       <table class="table table-striped">
