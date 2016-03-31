@@ -1,22 +1,22 @@
 angular.module('AngularScaffold.Controllers')
   .controller('HomeController', ['$scope', 'HomeService', '$sessionStorage', function ($scope, HomeService, $sessionStorage) {
-    	$scope.title = "Tabla de estudiantes de programamción 4."
+    	$scope.title = "Tabla de Ofertas"
       $scope.titleObject = {text: "Bienvenidos a Facebook JOBS"}
-      $scope.students = [];
-      $scope.student = {};
+      $scope.offers = [];
+      $scope.offer = {};
 
-      $scope.getStudents = function(){
-        HomeService.GetStudents().then(function(response){
-          $scope.students = response.data;
+      $scope.getoffers = function(){
+        HomeService.Getoffers().then(function(response){
+          $scope.offers = response.data;
         }).catch(function(err){
           alert(err.data.error + " " + err.data.message)
         });
       }
 
-      $scope.postStudents = function(){
-        HomeService.PostStudents($scope.student).then(function(response){
-          alert("Posted to /students");
-          $scope.getStudents();
+      $scope.postoffers = function(){
+        HomeService.Postoffers($scope.offer).then(function(response){
+          alert("Posted to /offers");
+          $scope.getoffers();
         }).catch(function(err){
           alert(err.data.error + " " + err.data.message);
         });
