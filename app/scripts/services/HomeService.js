@@ -3,10 +3,10 @@ angular.module('AngularScaffold.Services').factory('HomeService', ['$http',
 		$http.defaults.withCredentials = true;
 		var baseUrl = 'https://nelson-cardenas-backend.herokuapp.com/';
 		return {
-				Getoffers: function(){
+				GetOffers: function(){
 					return $http.get(baseUrl + "v1/offers");
 				},
-				Postoffers: function(payload){
+				PostOffers: function(payload){
 					return $http.post(baseUrl + "v1/offers", payload);
 				}
 	    };

@@ -5,18 +5,18 @@ angular.module('AngularScaffold.Controllers')
       $scope.offers = [];
       $scope.offer = {};
 
-      $scope.getoffers = function(){
-        HomeService.Getoffers().then(function(response){
+      $scope.getOffers = function(){
+        HomeService.GetOffers().then(function(response){
           $scope.offers = response.data;
         }).catch(function(err){
           alert(err.data.error + " " + err.data.message)
         });
       }
 
-      $scope.postoffers = function(){
-        HomeService.Postoffers($scope.offer).then(function(response){
+      $scope.postOffers = function(){
+        HomeService.PostOffers($scope.offer).then(function(response){
           alert("Posted to /offers");
-          $scope.getoffers();
+          $scope.getOffers();
         }).catch(function(err){
           alert(err.data.error + " " + err.data.message);
         });
